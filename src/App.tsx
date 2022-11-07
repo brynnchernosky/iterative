@@ -1,7 +1,32 @@
 import React, { useState } from "react";
 import "./App.scss";
+import Carousel from "react-material-ui-carousel";
+import { Paper, Button } from "@mui/material";
 
 function App() {
+  const duolingoSketches = [
+    {
+      name: "Homepage",
+      image: "DuolingoHomepage.png",
+    },
+    {
+      name: "Module Selection",
+      image: "DuolingoModules.png",
+    },
+    {
+      name: "Topic Selection",
+      image: "DuolingoTasks.png",
+    },
+    {
+      name: "Example Question",
+      image: "DuolingoQuestion.png",
+    },
+    {
+      name: "Example Question",
+      image: "DuolingoQuestion2.png",
+    },
+  ];
+
   return (
     <div id="App">
       <div id="appHeaderContainer">
@@ -35,6 +60,22 @@ function App() {
         <div className="section">
           <div id="Initial Sketches">
             <h2>Initial Sketches</h2>
+            <p>
+              Our first prototype was inspired by language-learning site
+              Duolingo. It features a simple, organized structure with a focus
+              on navigation elements that allow the user to select course topics
+              by theme and level of expertise. The below screens show a mockup
+              of the homepage, module selection page, topic selection page
+              within a given module, and two example questions.
+            </p>
+            <br />
+            <Carousel>
+              {duolingoSketches.map((item, i) => (
+                <Paper key={i}>
+                  <img src={item.image} style={{ width: "100%" }} />
+                </Paper>
+              ))}
+            </Carousel>
           </div>
         </div>
       </div>
