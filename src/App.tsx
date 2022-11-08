@@ -43,6 +43,51 @@ function App() {
     },
   ];
 
+  const khanSketches = [
+    {
+      name: "Homepage",
+      image: "KhanHome.png",
+    },
+    {
+      name: "Module Selection",
+      image: "KhanModule.png",
+    },
+    {
+      name: "Topic Selection",
+      image: "KhanSection.png",
+    },
+  ];
+
+  const codecademySketches = [
+    {
+      name: "Homepage",
+      image: "CodecademyHome.png",
+    },
+    {
+      name: "Module Selection",
+      image: "CodecademyModule.png",
+    },
+    {
+      name: "Course Selection",
+      image: "CodecademyCourse.png",
+    },
+  ];
+
+  const codinGameSketches = [
+    {
+      name: "Module Selection",
+      image: "CodingameModuleSelectionPage.png",
+    },
+    {
+      name: "Editor Page",
+      image: "CodingameEditorPage.png",
+    },
+    {
+      name: "Prototyping Page",
+      image: "CodingamePrototypingPage.png",
+    },
+  ];
+
   const finalSketches = [
     {
       name: "Homepage",
@@ -132,18 +177,35 @@ function App() {
             </Carousel>
             <br />
             <p>
-              Our second prototype was inspired by CodinGame. //add description
-              and image carousel//
+              Our second prototype was inspired by programming puzzle site
+              CodinGame. It features a set of puzzles at different difficulty
+              levels that the user can complete to earn XP. The puzzles are can
+              be chosen from a variety of categories, and the user can work on
+              them in an integrated editor.
             </p>
             <br />
             <p>
-              Our third prototype was inspired by Khan Academy. //add
-              description and image carousel//
+              The below screens show a mockup of the puzzle selection page,
+              editor page for a particular puzzle, and prototyping page for a
+              particular puzzle.
+            </p>
+            <br />
+            <Carousel>
+              {codinGameSketches.map((item, i) => (
+                <Paper key={i}>
+                  <img src={item.image} style={{ width: "100%" }} />
+                </Paper>
+              ))}
+            </Carousel>
+            <br />
+            <p>
+              Our third prototype was inspired by Khan Academy.
+              {/* TODO @Robert - add description and image carousel */}
             </p>
             <br />
             <p>
-              Our second prototype was inspired by Code Academy. //add
-              description and image carousel//
+              Our second prototype was inspired by Code Academy.
+              {/* TODO @Austin - add description and image carousel */}
             </p>
             <br />
           </div>
