@@ -25,6 +25,22 @@ function App() {
       name: "Example Question",
       image: "DuolingoQuestion2.png",
     },
+    {
+      name: "Mentor Meeting Scheduling",
+      image: "DuolingoMentor.png",
+    },
+    {
+      name: "Mentor Meeting Scheduling",
+      image: "DuolingoSchedule.png",
+    },
+    {
+      name: "Project Ideas",
+      image: "DuolingoProject.png",
+    },
+    {
+      name: "Project Ideas",
+      image: "DuolingoPrompts.png",
+    },
   ];
 
   return (
@@ -64,9 +80,16 @@ function App() {
               Our first prototype was inspired by language-learning site
               Duolingo. It features a simple, organized structure with a focus
               on navigation elements that allow the user to select course topics
-              by theme and level of expertise. The below screens show a mockup
-              of the homepage, module selection page, topic selection page
-              within a given module, and two example questions.
+              by theme and level of expertise. There are also workflows to set
+              up a meeting with a mentor and to look through project ideas in a
+              similar manner.
+            </p>
+            <br />
+            <p>
+              The below screens show a mockup of the homepage, module selection
+              page, topic selection page within a given module, two example
+              questions, the mentor meeting scheduling workflow, and the project
+              ideas workflow.
             </p>
             <br />
             <Carousel>
@@ -76,6 +99,46 @@ function App() {
                 </Paper>
               ))}
             </Carousel>
+            <br />
+            <p>
+              Our second prototype was inspired by CodinGame. //add description
+              and image carousel//
+            </p>
+            <br />
+            <p>
+              Our third prototype was inspired by Khan Academy. //add
+              description and image carousel//
+            </p>
+            <br />
+            <p>
+              Our second prototype was inspired by Code Academy. //add
+              description and image carousel//
+            </p>
+            <br />
+          </div>
+        </div>
+      </div>
+
+      <hr className="lineBreakBetweenSections" />
+      <div className="sectionContainer">
+        <div className="section">
+          <div id="Final Sketch">
+            <h2>Final Sketch</h2>
+            <p>
+              For our final sketch, we opted to combine elements from each of
+              the initial sketches, creating an integrated homepage with aspects
+              of all of the sketches and incorporating the meeting and project
+              workflows from the Duolingo prototype; the topic selection view
+              from the Khan Academy prototype; and the lesson view from the
+              CodinGame and Code Academy prototypes.
+            </p>
+            <br />
+            <p>
+              The below screens show a mockup of the homepage, the topic
+              selection page, an example question, the mentor meeting scheduling
+              workflow, and the project ideas workflow.
+            </p>
+            <p> add image carousel </p>
           </div>
         </div>
       </div>
