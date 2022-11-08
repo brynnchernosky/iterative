@@ -203,11 +203,26 @@ function App() {
               {/* TODO @Robert - add description and image carousel */}
             </p>
             <br />
+            <Carousel>
+              {khanSketches.map((item, i) => (
+                <Paper key={i}>
+                  <img src={item.image} style={{ width: "100%" }} />
+                </Paper>
+              ))}
+            </Carousel>
+            <br />
             <p>
-              Our second prototype was inspired by Code Academy.
+              Our second prototype was inspired by Codecademy.
               {/* TODO @Austin - add description and image carousel */}
             </p>
             <br />
+            <Carousel>
+              {codecademySketches.map((item, i) => (
+                <Paper key={i}>
+                  <img src={item.image} style={{ width: "100%" }} />
+                </Paper>
+              ))}
+            </Carousel>
           </div>
         </div>
       </div>
@@ -250,6 +265,7 @@ function App() {
               embed prototype -- revert to file as it was on the day we did
               critique
             </p>
+            {/* TODO */}
             <br />
             <p>
               During a critique session with our peers, we received the
@@ -291,6 +307,7 @@ function App() {
             interaction behavior in the prototype to reduce confusion; and made
             all of the minor changes.
           </div>
+          {/* TODO */}
         </div>
       </div>
       <hr className="lineBreakBetweenSections" />
@@ -299,7 +316,9 @@ function App() {
           <div id="Final Prototype">
             <h2>Final Prototype</h2>
             <p>embed prototype</p>
+            {/* TODO */}
             <p>discuss usertesting results</p>
+            {/* TODO */}
           </div>
         </div>
       </div>
