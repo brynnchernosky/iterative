@@ -43,6 +43,37 @@ function App() {
     },
   ];
 
+  const finalSketches = [
+    {
+      name: "Homepage",
+      image: "FinalHomepage.png",
+    },
+    {
+      name: "Topic Selection",
+      image: "FinalModule.png",
+    },
+    {
+      name: "Example Task",
+      image: "FinalLesson.png",
+    },
+    {
+      name: "Mentor Meeting Scheduling",
+      image: "FinalMentor.png",
+    },
+    {
+      name: "Mentor Meeting Scheduling",
+      image: "FinalSchedule.png",
+    },
+    {
+      name: "Project Ideas",
+      image: "FinalProject.png",
+    },
+    {
+      name: "Project Ideas",
+      image: "FinalPrompt.png",
+    },
+  ];
+
   return (
     <div id="App">
       <div id="appHeaderContainer">
@@ -135,10 +166,16 @@ function App() {
             <br />
             <p>
               The below screens show a mockup of the homepage, the topic
-              selection page, an example question, the mentor meeting scheduling
+              selection page, an example task, the mentor meeting scheduling
               workflow, and the project ideas workflow.
             </p>
-            <p> add image carousel </p>
+            <Carousel>
+              {finalSketches.map((item, i) => (
+                <Paper key={i}>
+                  <img src={item.image} style={{ width: "100%" }} />
+                </Paper>
+              ))}
+            </Carousel>
           </div>
         </div>
       </div>
@@ -147,6 +184,50 @@ function App() {
         <div className="section">
           <div id="Initial Prototype">
             <h2>Initial Prototype</h2>
+            <p>
+              embed prototype -- revert to file as it was on the day we did
+              critique
+            </p>
+            <br />
+            <p>
+              During a critique session with our peers, we received the
+              following feedback:
+            </p>
+            <ul>
+              <li>Usability</li>
+              <ul>
+                <li>Would like more styling on the homepage</li>
+                <li>
+                  Would like to have a better understanding of full curriculum
+                </li>
+                <li>
+                  Previous/next buttons on lesson page going to different
+                  courses unexpected
+                </li>
+              </ul>
+              <li>Suggested minor changes</li>
+              <ul>
+                <li>Use term submit instead of continue on scheduling page</li>
+                <li>Show more dates on scheduling page</li>
+                <li>
+                  Remove or make smaller the profile image in the lesson page
+                </li>
+                <li>Make left menu bar on lesson page smaller</li>
+                <li>
+                  Make the project ideas page scrollable instead of just
+                  implying it
+                </li>
+                <li>Remove add/remove goal options</li>
+                <li>Change yellow outline to orange on topic selection page</li>
+              </ul>
+            </ul>
+            <br />
+            In response to this feedback, we redesigned the homepage to be more
+            visual; added a section of the homepage explaining the user&apos;s
+            current place in the course with a button that in practice would
+            lead to a description of the entire curriculum; changed the
+            interaction behavior in the prototype to reduce confusion; and made
+            all of the minor changes.
           </div>
         </div>
       </div>
@@ -155,6 +236,8 @@ function App() {
         <div className="section">
           <div id="Final Prototype">
             <h2>Final Prototype</h2>
+            <p>embed prototype</p>
+            <p>discuss usertesting results</p>
           </div>
         </div>
       </div>
