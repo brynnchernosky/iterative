@@ -317,7 +317,9 @@ function App() {
         <div className="section">
           <div id="Initial Prototype">
             <h2>Initial Prototype</h2>
-            Based on our final sketch, we developed the following design guide.
+            Based on our final sketch, we developed the following visual design
+            guide for our website, shown below.
+            <img src={"/DesignGuide.jpg"} style={{ width: "30%" }} />
             After that, we combined our low-fidelity prototype with our design
             guide to produce our initial high-fidelity prototype, which is
             embedded below and can also be accessed{" "}
@@ -325,6 +327,7 @@ function App() {
               here
             </a>
             .
+            <br />
             <iframe
               style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
               width="800"
