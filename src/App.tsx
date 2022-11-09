@@ -319,7 +319,11 @@ function App() {
             <h2>Initial Prototype</h2>
             Based on our final sketch, we developed the following visual design
             guide for our website, shown below.
-            <img src={"/DesignGuide.jpg"} style={{ width: "30%" }} />
+            <img
+              src={"/DesignGuide.jpg"}
+              id="designGuide"
+              style={{ width: "30%" }}
+            />
             After that, we combined our low-fidelity prototype with our design
             guide to produce our initial high-fidelity prototype, which is
             embedded below and can also be accessed{" "}
@@ -330,8 +334,8 @@ function App() {
             <br />
             <iframe
               style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
-              width="800"
-              height="450"
+              width="100%"
+              height="600"
               src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FHXYixM5CfPGaaenXeHHSiD%2FAvocademy-Initial-Prototype%3Fnode-id%3D1%253A7%26scaling%3Dscale-down%26page-id%3D0%253A1%26starting-point-node-id%3D1%253A7"
               allowFullScreen
             ></iframe>
@@ -423,8 +427,8 @@ function App() {
             <br />
             <iframe
               style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
-              width="800"
-              height="450"
+              width="100%"
+              height="600"
               src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fh9kL8DP45ex85JgEiNQ85H%2FAvocademy-Final-Prototype%3Fpage-id%3D0%253A1%26node-id%3D1%253A7%26viewport%3D24%252C212%252C0.14%26scaling%3Dscale-down%26starting-point-node-id%3D1%253A7"
               allowFullScreen
             ></iframe>
