@@ -64,12 +64,12 @@ function App() {
       image: "CodecademyHome.png",
     },
     {
-      name: "Module Selection",
-      image: "CodecademyModule.png",
-    },
-    {
       name: "Course Selection",
       image: "CodecademyCourse.png",
+    },
+    {
+      name: "Module Selection",
+      image: "CodecademyModule.png",
     },
   ];
 
@@ -131,18 +131,28 @@ function App() {
           <div id="Overview">
             <h2>Overview</h2>
             <p>
-              Avocademy is a 2020 startup dedicated to teaching people UI/UX
-              design. They offer an 8 week personalized UI/UX curriculum,
-              mentoring, and portfolio-building support.
+              For this assignment, students are tasked with iteratively
+              designing a mobile, website, or desktop application for a startup
+              of their choice.
             </p>
             <br />
             <p>
-              Our team decided to prototype what that experience could look like
-              for users, sketching out a variety of possible experiences before
+              Our startup of choice is Avocademy, a startup founded in 2020
+              dedicated to teaching people UI/UX design. They offer an
+              eight-week personalized UI/UX curriculum, mentoring services, and
+              portfolio-building support. We chose this startup because we are
+              all current students in a UI/UX course at Brown, which allows us
+              to integrate our perspectives into the project.
+            </p>
+            <br />
+            <p>
+              Our team decided to prototype what the Avocademy learning
+              experience could look like for users of a website. To do this, we
+              initially sketched out a variety of possible experiences before
               honing in on a final design to produce an interactive Figma
               prototype for. We received feedback during a critique session and
               through user testing, which allowed us to further refine our
-              prototype.
+              prototype and ultimately show it to the company.
             </p>
           </div>
         </div>
@@ -151,6 +161,7 @@ function App() {
       <div className="sectionContainer">
         <div className="section">
           <div id="Initial Sketches">
+            {/* TODO @Nick - make images in carousel into a uniform size */}
             <h2>Initial Sketches</h2>
             <p>
               Our first prototype was inspired by language-learning site
@@ -212,8 +223,16 @@ function App() {
             </Carousel>
             <br />
             <p>
-              Our second prototype was inspired by Codecademy.
-              {/* TODO @Austin - add description and image carousel */}
+              Our fourth prototype was inspired by Codecademy, and online
+              platform that offers coding classes to many different languages.
+              It features a detailed page for one to keep track of the topics
+              they are interested in or working on and a code editor for doing
+              activities.
+            </p>
+            <br />
+            <p>
+              The below screens show a mockup of the home page, course selection
+              page, and editor page for an activity of a module.
             </p>
             <br />
             <Carousel>
@@ -226,7 +245,6 @@ function App() {
           </div>
         </div>
       </div>
-
       <hr className="lineBreakBetweenSections" />
       <div className="sectionContainer">
         <div className="section">
@@ -238,7 +256,7 @@ function App() {
               of all of the sketches and incorporating the meeting and project
               workflows from the Duolingo prototype; the topic selection view
               from the Khan Academy prototype; and the lesson view from the
-              CodinGame and Code Academy prototypes.
+              CodinGame and Codecademy prototypes.
             </p>
             <br />
             <p>
@@ -317,7 +335,9 @@ function App() {
             <h2>Final Prototype</h2>
             <p>embed prototype</p>
             {/* TODO */}
-            <p>discuss usertesting results</p>
+            <p>discuss user testing results</p>
+            {/* TODO */}
+            <p>email startup</p>
             {/* TODO */}
           </div>
         </div>
