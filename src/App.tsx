@@ -184,7 +184,9 @@ function App() {
       <div className="sectionContainer">
         <div className="section">
           <div id="Initial Sketches">
-            {/* TODO @Nick - make images in carousel into a uniform size */}
+            {/* TODO @Nick - make images in carousel into a uniform size and smaller */}
+            {/* TODO should we also add some instructions so users know how to use 
+            carousel buttons (they start off hidden) */}
             <h2>Initial Sketches</h2>
             <p>
               Our first prototype was inspired by language-learning site
@@ -244,6 +246,7 @@ function App() {
               these topics opens the Topic View, where the user can read the
               topic description and jump directly into the lesson.
             </p>
+            <br />
             <p>
               The below screens show a mockup of the homepage, module view, and
               topic view for an activity of a module.
@@ -329,7 +332,6 @@ function App() {
               src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FHXYixM5CfPGaaenXeHHSiD%2FAvocademy-Initial-Prototype%3Fnode-id%3D1%253A7%26scaling%3Dscale-down%26page-id%3D0%253A1%26starting-point-node-id%3D1%253A7"
               allowFullScreen
             ></iframe>
-            {/* TODO */}
             <br />
             <p>
               During a critique session with our peers, we received the
@@ -383,9 +385,15 @@ function App() {
             </ul>
           </div>
         </div>
+        <hr className="lineBreakBetweenSections" />
         <div className="section">
           <div id="Prototype Comparison">
             <h2>Prototype Comparison</h2>
+            <p>
+              The diagrams below showcase the key changes that we made between
+              the initial and final version of the prototype after receiving
+              feedback.
+            </p>
             <Carousel autoPlay={false} sx={{ width: "80vw" }}>
               {comparisons.map((item, i) => (
                 <Paper key={i}>
@@ -401,8 +409,22 @@ function App() {
         <div className="section">
           <div id="Final Prototype">
             <h2>Final Prototype</h2>
-            <p>embed prototype</p>
-            {/* TODO */}
+            Based on the feedback we received on our initial prototype, we
+            implemented the changes from the "Prototype Comparison" section and
+            developed the final version of the high-fidelity prototype, which is
+            embedded below and can also be accessed{" "}
+            <a href="https://www.figma.com/proto/h9kL8DP45ex85JgEiNQ85H/Avocademy-Final-Prototype?page-id=0%3A1&node-id=1%3A7&viewport=24%2C212%2C0.14&scaling=scale-down&starting-point-node-id=1%3A7">
+              here
+            </a>
+            .
+            <br />
+            <iframe
+              style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
+              width="800"
+              height="450"
+              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fh9kL8DP45ex85JgEiNQ85H%2FAvocademy-Final-Prototype%3Fpage-id%3D0%253A1%26node-id%3D1%253A7%26viewport%3D24%252C212%252C0.14%26scaling%3Dscale-down%26starting-point-node-id%3D1%253A7"
+              allowFullScreen
+            ></iframe>
           </div>
         </div>
       </div>
