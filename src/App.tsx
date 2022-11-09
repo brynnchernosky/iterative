@@ -306,7 +306,21 @@ function App() {
         <div className="section">
           <div id="Initial Prototype">
             <h2>Initial Prototype</h2>
-            <p>embed prototype</p>
+            Based on our final sketch, we developed the following design guide.
+            After that, we combined our low-fidelity prototype with our design
+            guide to produce our initial high-fidelity prototype, which is
+            embedded below and can also be accessed{" "}
+            <a href="https://www.figma.com/proto/HXYixM5CfPGaaenXeHHSiD/Avocademy-Initial-Prototype?node-id=1%3A7&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A7">
+              here
+            </a>
+            .
+            <iframe
+              style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
+              width="800"
+              height="450"
+              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FHXYixM5CfPGaaenXeHHSiD%2FAvocademy-Initial-Prototype%3Fnode-id%3D1%253A7%26scaling%3Dscale-down%26page-id%3D0%253A1%26starting-point-node-id%3D1%253A7"
+              allowFullScreen
+            ></iframe>
             {/* TODO */}
             <br />
             <p>
@@ -322,7 +336,7 @@ function App() {
                 </li>
                 <li>
                   Previous/next buttons on lesson page going to different
-                  courses unexpected
+                  courses is unexpected
                 </li>
               </ul>
               <li>Suggested minor changes</li>
@@ -347,12 +361,12 @@ function App() {
               <li>Redesigned the homepage to be more visual</li>
               <li>
                 Added a section of the homepage showing the user&apos;s current
-                place in the course. This includes a button that in practice
+                place in the course, which includes a button that in practice
                 would lead to a description of the entire curriculum
               </li>
               <li>
-                Changed the interaction behavior in the prototype to reduce
-                confusion
+                Changed the interaction behavior in the prototype to reduce user
+                confusion and ensure mock content matched user expectations
               </li>
               <li>
                 Implemented all of the suggested changes in the &quot;suggested
