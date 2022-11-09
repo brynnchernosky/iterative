@@ -314,20 +314,29 @@ function App() {
         <div className="section">
           <div id="Initial Prototype">
             <h2>Initial Prototype</h2>
-            Based on our final sketch, we developed the following visual design
-            guide for our website, shown below.
+            <p>
+              Based on our final sketch, we developed the following visual
+              design guide for our website, shown below, to ensure stylistic
+              cohesiveness. The stylized logo was taken from the{" "}
+              <a href="https://www.ycombinator.com/companies/avocademy">
+                YCombinator listing
+              </a>{" "}
+              for the startup.
+            </p>
             <img
               src={"/DesignGuide.jpg"}
               id="designGuide"
               style={{ width: "30%" }}
             />
-            After that, we combined our low-fidelity prototype with our design
-            guide to produce our initial high-fidelity prototype, which is
-            embedded below and can also be accessed{" "}
-            <a href="https://www.figma.com/proto/HXYixM5CfPGaaenXeHHSiD/Avocademy-Initial-Prototype?node-id=1%3A7&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A7">
-              here
-            </a>
-            .
+            <p>
+              After that, we combined our low-fidelity prototype with our design
+              guide to produce our initial high-fidelity prototype, which is
+              embedded below and can also be accessed{" "}
+              <a href="https://www.figma.com/proto/HXYixM5CfPGaaenXeHHSiD/Avocademy-Initial-Prototype?node-id=1%3A7&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A7">
+                here
+              </a>
+              .
+            </p>
             <br />
             <iframe
               style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
@@ -337,20 +346,32 @@ function App() {
               allowFullScreen
             ></iframe>
             <br />
+          </div>
+        </div>
+      </div>
+      <hr className="lineBreakBetweenSections" />
+      <div className="sectionContainer">
+        <div className="section">
+          <div id="Initial Feedback">
+            <h2>Initial Feedback</h2>
             <p>
               During a critique session with our peers, we received the
-              following feedback:
+              following feedback on our high fidelity-prototype:
             </p>
             <ul>
               <li>Usability</li>
               <ul>
-                <li>Would like more styling on the homepage</li>
                 <li>
-                  Would like to have a better understanding of full curriculum
+                  Users would like more styling on the homepage versus old
+                  school blue HTML links
                 </li>
                 <li>
-                  Previous/next buttons on lesson page going to different
-                  courses is unexpected
+                  Users would like to have a better understanding of the full
+                  curriculum
+                </li>
+                <li>
+                  Users were confused by previous/next buttons on the lesson
+                  page going to different courses than expected
                 </li>
               </ul>
               <li>Suggested minor changes</li>
@@ -366,13 +387,22 @@ function App() {
                   implying it
                 </li>
                 <li>Remove add/remove goal options</li>
-                <li>Change yellow outline to orange on topic selection page</li>
+                <li>
+                  Change yellow outline on topic selection page to a different
+                  color
+                </li>
               </ul>
             </ul>
             <br />
-            <p>In response to this feedback, we implemented these changes:</p>
+            <p>
+              In response to this feedback, we implemented the following
+              changes:
+            </p>
             <ul>
-              <li>Redesigned the homepage to be more visual</li>
+              <li>
+                Redesigned the homepage to be more visual through adding icons
+                and progress bars for each course
+              </li>
               <li>
                 Added a section of the homepage showing the user&apos;s current
                 place in the course, which includes a button that in practice
@@ -394,11 +424,15 @@ function App() {
           <div id="Prototype Comparison">
             <h2>Prototype Comparison</h2>
             <p>
-              The diagrams below showcase the key changes that we made between
-              the initial and final version of the prototype after receiving
-              feedback.
+              The diagrams below showcase the key changes that we made after
+              receiving feedback, with the initial version of the prototype
+              shown on the right and the final version shown on the left.
             </p>
-            <Carousel autoPlay={false} sx={{ width: "80vw" }}>
+            <Carousel
+              autoPlay={false}
+              sx={{ width: "75vw" }}
+              navButtonsAlwaysVisible={true}
+            >
               {comparisons.map((item, i) => (
                 <Paper key={i}>
                   <img src={item.image} />
@@ -413,14 +447,16 @@ function App() {
         <div className="section">
           <div id="Final Prototype">
             <h2>Final Prototype</h2>
-            Based on the feedback we received on our initial prototype, we
-            implemented the changes from the "Prototype Comparison" section and
-            developed the final version of the high-fidelity prototype, which is
-            embedded below and can also be accessed{" "}
-            <a href="https://www.figma.com/proto/h9kL8DP45ex85JgEiNQ85H/Avocademy-Final-Prototype?page-id=0%3A1&node-id=1%3A7&viewport=24%2C212%2C0.14&scaling=scale-down&starting-point-node-id=1%3A7">
-              here
-            </a>
-            .
+            <p>
+              Based on the feedback we received on our initial prototype, we
+              implemented the changes from the "Prototype Comparison" section
+              and developed the final version of the high-fidelity prototype,
+              which is embedded below and can also be accessed{" "}
+              <a href="https://www.figma.com/proto/h9kL8DP45ex85JgEiNQ85H/Avocademy-Final-Prototype?page-id=0%3A1&node-id=1%3A7&viewport=24%2C212%2C0.14&scaling=scale-down&starting-point-node-id=1%3A7">
+                here
+              </a>
+              .
+            </p>
             <br />
             <iframe
               style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
@@ -438,40 +474,56 @@ function App() {
           <div id="User Testing">
             <h2>User Testing</h2>
             <p>
-              We conducted user testing on our final prototype with 3 users. The
-              users were given a prompt that provided context for the prototype
-              and asked them to complete a set of tasks.
+              We conducted user testing on our final prototype with three users
+              through the UserTesting platform. The sampled users were all women
+              in the United States from age 28-40 who rated themselves as having
+              average to advanced web expertise.
+            </p>
+            <p>
+              Users were given a prompt that provided context for the prototype,
+              and were then asked to complete a series of tasks using the
+              prototype.
             </p>
             <br />
             <p>The scenario provided to the users was as follows:</p>
+            <ul>
+              <li>
+                You've signed up for an 8 week bootcamp learning about user
+                interfaces and user experiences, with the hopes of getting a job
+                in UI/UX afterwards. You're currently on Week 2 of the course,
+                and you have been working on the Intro to Bootstrap module.
+                Please note that the "webpage" you'll interact with for these
+                tasks is not an actual webpage but instead an interactive mockup
+                made on prototyping software.
+              </li>
+            </ul>
+            <br />
+            <p>The following tasks were given to the users:</p>
+            <ol>
+              <li>
+                {" "}
+                Submit your work on the Intro to Bootstrap Basic Tools task you
+                were working on earlier.
+              </li>
+              <li>Set up a meeting with a mentor to discuss UI/UX concepts.</li>
+              <li>
+                Look at 3 portfolio project ideas related to design principles.
+              </li>
+            </ol>
+            <br />
             <p>
-              <ul>
-                <li>
-                  You've signed up for an 8 week bootcamp learning about user
-                  interfaces and user experiences, with the hopes of getting a
-                  job in UI/UX afterwards. You're currently on Week 2 of the
-                  course, and you have been working on the Intro to Bootstrap
-                  module. Please note that the "webpage" you'll interact with
-                  for these tasks is not an actual webpage but instead an
-                  interactive mockup made on prototyping software.
-                </li>
-              </ul>
+              After attempting each task, users were asked if they were able to
+              successfully complete the task and how difficult they found it.
+              After attempting all of the tasks, users were asked to give
+              feedback related to their frustrations with the website,
+              improvements they would like to make, things they liked about the
+              website, and how likely they would be to recommend it to a friend
+              or colleague.
             </p>
             <br />
-            <p>The tasks given to the users were as follows:</p>
             <p>
-              <ul>
-                <li>
-                  Sign up for an account and complete the first lesson of the
-                  course
-                </li>
-                <li>
-                  Schedule a mentor meeting and complete the project ideas
-                  workflow
-                </li>
-              </ul>
+              Videos of each user's performance on the tasks are shown below:
             </p>
-            <br />
             <Grid container spacing={2}>
               <Grid item xs={12} md={4}>
                 <Card sx={{ maxWidth: 345 }}>
