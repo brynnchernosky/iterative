@@ -306,9 +306,7 @@ function App() {
         <div className="section">
           <div id="Initial Prototype">
             <h2>Initial Prototype</h2>
-            Based on our final sketch, we developed the following design guide.
-            After that, we combined our low-fidelity prototype with our design
-            guide to produce our initial high-fidelity prototype, which is
+            Based on our low-fidelity prototype, we produced an initial high-fidelity prototype with example interactions in Figma, which is
             embedded below and can also be accessed{" "}
             <a href="https://www.figma.com/proto/HXYixM5CfPGaaenXeHHSiD/Avocademy-Initial-Prototype?node-id=1%3A7&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A7">
               here
