@@ -11,6 +11,7 @@ import {
   ListItemText,
   Paper,
   Popover,
+  ThemeProvider,
   Toolbar,
   Typography,
 } from "@mui/material";
@@ -18,8 +19,17 @@ import Carousel from "react-material-ui-carousel";
 import MenuIcon from "@mui/icons-material/Menu";
 import React, { useState } from "react";
 import "./App.scss";
+import { createTheme } from "@mui/material/styles";
 
 function App() {
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: "#C4DBBD",
+      },
+    },
+  });
+
   const duolingoSketches = [
     {
       name: "Homepage",
@@ -164,83 +174,85 @@ function App() {
   return (
     <div id="App">
       <div id="menuContainer">
-        <AppBar>
-          <Toolbar>
-            <IconButton
-              color="inherit"
-              onClick={(e) => {
-                handleClick(e);
-              }}
-            >
-              <MenuIcon fontSize="large" />
-            </IconButton>
-            <Popover
-              open={open}
-              anchorEl={anchorEl}
-              onClose={handleClose}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-            >
-              <List>
-                <ListItem disablePadding>
-                  <a href={`#Overview`} className="menuButton">
-                    <ListItemButton>
-                      <ListItemText primary="Overview" />
-                    </ListItemButton>
-                  </a>
-                </ListItem>
-                <ListItem disablePadding>
-                  <a href={`#InitialSketches`} className="menuButton">
-                    <ListItemButton>
-                      <ListItemText primary="Initial Sketches" />
-                    </ListItemButton>
-                  </a>
-                </ListItem>
-                <ListItem disablePadding>
-                  <a href={`#FinalSketch`} className="menuButton">
-                    <ListItemButton>
-                      <ListItemText primary="Final Sketch" />
-                    </ListItemButton>
-                  </a>
-                </ListItem>
-                <ListItem disablePadding>
-                  <a href={`#InitialPrototype`} className="menuButton">
-                    <ListItemButton>
-                      <ListItemText primary="Initial Prototype" />
-                    </ListItemButton>
-                  </a>
-                </ListItem>
-                <ListItem disablePadding>
-                  <a href={`#InitialFeedback`} className="menuButton">
-                    <ListItemButton>
-                      <ListItemText primary="Initial Feedback" />
-                    </ListItemButton>
-                  </a>
-                </ListItem>
-                <ListItem disablePadding>
-                  <a href={`#FinalPrototype`} className="menuButton">
-                    <ListItemButton>
-                      <ListItemText primary="Final Prototype" />
-                    </ListItemButton>
-                  </a>
-                </ListItem>
-                <ListItem disablePadding>
-                  <a href={`#UserTesting`} className="menuButton">
-                    <ListItemButton>
-                      <ListItemText primary="Final Feedback" />
-                    </ListItemButton>
-                  </a>
-                </ListItem>
-              </List>
-            </Popover>
+        <ThemeProvider theme={theme}>
+          <AppBar color="primary">
+            <Toolbar>
+              <IconButton
+                color="inherit"
+                onClick={(e) => {
+                  handleClick(e);
+                }}
+              >
+                <MenuIcon fontSize="large" />
+              </IconButton>
+              <Popover
+                open={open}
+                anchorEl={anchorEl}
+                onClose={handleClose}
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "left",
+                }}
+              >
+                <List>
+                  <ListItem disablePadding>
+                    <a href={`#Overview`} className="menuButton">
+                      <ListItemButton>
+                        <ListItemText primary="Overview" />
+                      </ListItemButton>
+                    </a>
+                  </ListItem>
+                  <ListItem disablePadding>
+                    <a href={`#InitialSketches`} className="menuButton">
+                      <ListItemButton>
+                        <ListItemText primary="Initial Sketches" />
+                      </ListItemButton>
+                    </a>
+                  </ListItem>
+                  <ListItem disablePadding>
+                    <a href={`#FinalSketch`} className="menuButton">
+                      <ListItemButton>
+                        <ListItemText primary="Final Sketch" />
+                      </ListItemButton>
+                    </a>
+                  </ListItem>
+                  <ListItem disablePadding>
+                    <a href={`#InitialPrototype`} className="menuButton">
+                      <ListItemButton>
+                        <ListItemText primary="Initial Prototype" />
+                      </ListItemButton>
+                    </a>
+                  </ListItem>
+                  <ListItem disablePadding>
+                    <a href={`#InitialFeedback`} className="menuButton">
+                      <ListItemButton>
+                        <ListItemText primary="Initial Feedback" />
+                      </ListItemButton>
+                    </a>
+                  </ListItem>
+                  <ListItem disablePadding>
+                    <a href={`#FinalPrototype`} className="menuButton">
+                      <ListItemButton>
+                        <ListItemText primary="Final Prototype" />
+                      </ListItemButton>
+                    </a>
+                  </ListItem>
+                  <ListItem disablePadding>
+                    <a href={`#UserTesting`} className="menuButton">
+                      <ListItemButton>
+                        <ListItemText primary="Final Feedback" />
+                      </ListItemButton>
+                    </a>
+                  </ListItem>
+                </List>
+              </Popover>
 
-            <div style={{ marginLeft: "20px" }}>
-              <h1>Iterative Design</h1>
-            </div>
-          </Toolbar>
-        </AppBar>
+              <div style={{ marginLeft: "20px" }}>
+                <h1>Iterative Design</h1>
+              </div>
+            </Toolbar>
+          </AppBar>
+        </ThemeProvider>
       </div>
       <div className="sectionContainer" id="Overview">
         <div className="section">
@@ -305,9 +317,9 @@ function App() {
             <p>
               Our second prototype was inspired by programming puzzle site
               CodinGame. It features a set of puzzles at different difficulty
-              levels that the user can complete to earn XP. The puzzles are can
-              be chosen from a variety of categories, and the user can work on
-              them in an integrated editor.
+              levels that the user can complete to earn XP. The puzzles can be
+              chosen from a variety of categories, and the user can work on them
+              in an integrated editor.
             </p>
             <br />
             <p>
@@ -392,6 +404,7 @@ function App() {
               selection page, an example task, the mentor meeting scheduling
               workflow, and the project ideas workflow.
             </p>
+            <br />
             <Carousel autoPlay={false} navButtonsAlwaysVisible={true}>
               {finalSketches.map((item, i) => (
                 <Paper key={i}>
@@ -408,7 +421,7 @@ function App() {
           <div>
             <h2>Initial Prototype</h2>
             <p>
-              Based on our final sketch, we developed the following visual
+              After finalizing our sketch, we developed the following visual
               design guide for our website, shown below, to ensure stylistic
               cohesiveness. The stylized logo was taken from the{" "}
               <a href="https://www.ycombinator.com/companies/avocademy">
@@ -419,12 +432,12 @@ function App() {
             <img
               src={"/DesignGuide.jpg"}
               id="designGuide"
-              style={{ width: "30%" }}
+              style={{ width: "50%" }}
             />
             <p>
               After that, we combined our low-fidelity prototype with our design
-              guide to produce our initial high-fidelity prototype, which is
-              embedded below and can also be accessed{" "}
+              guide to produce our initial interactive high-fidelity prototype,
+              which is embedded below and can also be accessed{" "}
               <a href="https://www.figma.com/proto/HXYixM5CfPGaaenXeHHSiD/Avocademy-Initial-Prototype?node-id=1%3A7&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A7">
                 here
               </a>
@@ -456,7 +469,7 @@ function App() {
               <ul>
                 <li>
                   Users would like more styling on the homepage versus old
-                  school blue HTML links
+                  school, blue HTML links
                 </li>
                 <li>
                   Users would like to have a better understanding of the full
@@ -471,18 +484,16 @@ function App() {
               <ul>
                 <li>Use term submit instead of continue on scheduling page</li>
                 <li>Show more dates on scheduling page</li>
-                <li>
-                  Remove or make smaller the profile image in the lesson page
-                </li>
+                <li>Make the profile image in the lesson page smaller</li>
                 <li>Make left menu bar on lesson page smaller</li>
                 <li>
                   Make the project ideas page scrollable instead of just
                   implying it
                 </li>
-                <li>Remove add/remove goal options</li>
+                <li>Remove the add/remove goal options on the homepage</li>
                 <li>
-                  Change yellow outline on topic selection page to a different
-                  color
+                  Change the yellow outline on the topic selection page to a
+                  different color
                 </li>
               </ul>
             </ul>
@@ -539,8 +550,8 @@ function App() {
             <p>
               Based on the feedback we received on our initial prototype, we
               implemented the changes from the "Prototype Comparison" section
-              and developed the final version of the high-fidelity prototype,
-              which is embedded below and can also be accessed{" "}
+              and developed the final version of our interactive high-fidelity
+              prototype, which is embedded below and can also be accessed{" "}
               <a href="https://www.figma.com/proto/h9kL8DP45ex85JgEiNQ85H/Avocademy-Final-Prototype?page-id=0%3A1&node-id=1%3A7&viewport=24%2C212%2C0.14&scaling=scale-down&starting-point-node-id=1%3A7">
                 here
               </a>
@@ -562,12 +573,14 @@ function App() {
         <div className="section">
           <div>
             <h2>Final Feedback</h2>
+            <h3>Process</h3>
             <p>
               We conducted user testing on our final prototype with three users
               through the UserTesting platform. The sampled users were all women
               in the United States from age 28-40 who rated themselves as having
               average to advanced web expertise.
             </p>
+            <br />
             <p>
               Users were given a prompt that provided context for the prototype,
               and were then asked to complete a series of tasks using the
@@ -624,6 +637,7 @@ function App() {
               </ul>
             </p>
             <br />
+            <h3>Results</h3>
             <p>
               Videos of each user's performance on the tasks are shown below:
             </p>
@@ -732,7 +746,7 @@ function App() {
                       <ul>
                         <li>
                           User initially attempted to navigate to the course
-                          through the goals section, which was not interactable.
+                          through the goals section, which was not interactive.
                           They were eventually able to navigate to lesson page
                           and submit work
                         </li>
@@ -756,41 +770,55 @@ function App() {
               </Grid>
             </Grid>
             <br />
-            <p>
-              Users explicitly complimented the layout of the editor page and
-              the goals sections. None of the users got stuck for any
-              significant amount of time, and all of them were able to complete
-              the tasks successfully.
-            </p>
-            <br />
-            <p>
-              There were occasional moments of hesitation while users were
-              determining which button was necessary to use for navigation. This
-              could be addressed by making the navigation buttons prominently
-              show which page they would be navigating to, and by making the
-              buttons use more visually distinct icons. The user dashboard page
-              could be improved by making the in-progress courses more visually
-              distinct to make it easier for users to quickly resume.
-            </p>
-            <br />
-            <p>
-              Users explicitly appreciated the breakdowns of content in modules,
-              which made the content more approachable and inviting. This
-              strength could be further embraced by emphasizing the same module
-              structure on every page, and by bringing the module layout to the
-              syllabus button on the lesson editor page. The lesson editor page
-              could have also benefited from a clearer indication of the success
-              of the submission, as users were unsure of the status of their
-              work.
-            </p>
-            <br />
-            <p>
-              Overall, all the users were able to complete the tasks
-              successfully, and the feedback was generally positive. In their
-              post-test questionnaire, all the users rated the site as very
-              likely to recommend to a friend or colleague (10, 9, and 7 out of
-              10 respectively).
-            </p>
+            <h3>Analysis</h3>
+            <ul>
+              <li>
+                Users explicitly complimented the layout of the editor page and
+                the goals sections. None of the users got stuck for any
+                significant amount of time, and all of them were able to
+                complete the tasks successfully.
+              </li>
+              <li>
+                There were occasional moments of hesitation while users were
+                determining which button was necessary to use for navigation.
+              </li>
+              <ul>
+                <li>
+                  This could be addressed by making the navigation buttons
+                  prominently show which page they would be navigating to, and
+                  by making the buttons use more visually distinct icons.{" "}
+                </li>
+                <li>
+                  The user dashboard page could be improved by making the
+                  in-progress courses more visually distinct to make it easier
+                  for users to quickly resume a lesson.
+                </li>
+              </ul>
+              <li>
+                Users explicitly appreciated the breakdowns of content in
+                modules, which made the content more approachable and inviting.
+              </li>
+              <ul>
+                <li>
+                  This strength could be further embraced by emphasizing the
+                  same module structure on every page, and by bringing the
+                  module layout to the syllabus button on the lesson editor
+                  page.
+                </li>
+                <li>
+                  The lesson editor page could have also benefited from a
+                  clearer indication of the success of the submission, as users
+                  were unsure of the status of their work.
+                </li>
+              </ul>
+              <li>
+                Overall, all the users were able to complete the tasks
+                successfully, and the feedback was generally positive. In their
+                post-test questionnaire, all the users rated the site as very
+                likely to recommend to a friend or colleague (10, 9, and 7 out
+                of 10 respectively).
+              </li>
+            </ul>
           </div>
         </div>
       </div>
