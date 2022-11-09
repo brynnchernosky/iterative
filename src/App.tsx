@@ -1,15 +1,23 @@
+import {
+  AppBar,
+  Card,
+  CardContent,
+  CardMedia,
+  Grid,
+  IconButton,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+  Paper,
+  Popover,
+  Toolbar,
+  Typography,
+} from "@mui/material";
+import Carousel from "react-material-ui-carousel";
+import MenuIcon from "@mui/icons-material/Menu";
 import React, { useState } from "react";
 import "./App.scss";
-import Carousel from "react-material-ui-carousel";
-import {
-  Paper,
-  Button,
-  Card,
-  CardMedia,
-  CardContent,
-  Typography,
-  Grid,
-} from "@mui/material";
 
 function App() {
   const duolingoSketches = [
@@ -142,16 +150,101 @@ function App() {
     },
   ];
 
+  // Start code from MUI https://mui.com/material-ui/react-popover/
+  const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  // End code from MUI
+
   return (
     <div id="App">
-      <div id="appHeaderContainer">
-        <h1>Iterative Design</h1>
+      <div id="menuContainer">
+        <AppBar>
+          <Toolbar>
+            <IconButton
+              color="inherit"
+              onClick={(e) => {
+                handleClick(e);
+              }}
+            >
+              <MenuIcon fontSize="large" />
+            </IconButton>
+            <Popover
+              open={open}
+              anchorEl={anchorEl}
+              onClose={handleClose}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "left",
+              }}
+            >
+              <List>
+                <ListItem disablePadding>
+                  <a href={`#Overview`} className="menuButton">
+                    <ListItemButton>
+                      <ListItemText primary="Overview" />
+                    </ListItemButton>
+                  </a>
+                </ListItem>
+                <ListItem disablePadding>
+                  <a href={`#InitialSketches`} className="menuButton">
+                    <ListItemButton>
+                      <ListItemText primary="Initial Sketches" />
+                    </ListItemButton>
+                  </a>
+                </ListItem>
+                <ListItem disablePadding>
+                  <a href={`#FinalSketch`} className="menuButton">
+                    <ListItemButton>
+                      <ListItemText primary="Final Sketch" />
+                    </ListItemButton>
+                  </a>
+                </ListItem>
+                <ListItem disablePadding>
+                  <a href={`#InitialPrototype`} className="menuButton">
+                    <ListItemButton>
+                      <ListItemText primary="Initial Prototype" />
+                    </ListItemButton>
+                  </a>
+                </ListItem>
+                <ListItem disablePadding>
+                  <a href={`#InitialFeedback`} className="menuButton">
+                    <ListItemButton>
+                      <ListItemText primary="Initial Feedback" />
+                    </ListItemButton>
+                  </a>
+                </ListItem>
+                <ListItem disablePadding>
+                  <a href={`#FinalPrototype`} className="menuButton">
+                    <ListItemButton>
+                      <ListItemText primary="Final Prototype" />
+                    </ListItemButton>
+                  </a>
+                </ListItem>
+                <ListItem disablePadding>
+                  <a href={`#UserTesting`} className="menuButton">
+                    <ListItemButton>
+                      <ListItemText primary="Final Feedback" />
+                    </ListItemButton>
+                  </a>
+                </ListItem>
+              </List>
+            </Popover>
+
+            <div style={{ marginLeft: "20px" }}>
+              <h1>Iterative Design</h1>
+            </div>
+          </Toolbar>
+        </AppBar>
       </div>
-      <div id="menuContainer">{/* TODO: Add menu */}</div>
-      <hr className="lineBreakBetweenSections" />
-      <div className="sectionContainer">
+      <div className="sectionContainer" id="Overview">
         <div className="section">
-          <div id="Overview">
+          <div>
             <h2>Overview</h2>
             <p>
               For this assignment, students were tasked with iteratively
@@ -180,9 +273,9 @@ function App() {
         </div>
       </div>
       <hr className="lineBreakBetweenSections" />
-      <div className="sectionContainer">
+      <div className="sectionContainer" id="InitialSketches">
         <div className="section">
-          <div id="Initial Sketches">
+          <div>
             {/* TODO @Nick - make images in carousel into a uniform size and smaller */}
             <h2>Initial Sketches</h2>
             <p>
@@ -281,9 +374,9 @@ function App() {
         </div>
       </div>
       <hr className="lineBreakBetweenSections" />
-      <div className="sectionContainer">
+      <div className="sectionContainer" id="FinalSketch">
         <div className="section">
-          <div id="Final Sketch">
+          <div>
             <h2>Final Sketch</h2>
             <p>
               For our final sketch, we opted to combine elements from each of
@@ -310,9 +403,9 @@ function App() {
         </div>
       </div>
       <hr className="lineBreakBetweenSections" />
-      <div className="sectionContainer">
+      <div className="sectionContainer" id="InitialPrototype">
         <div className="section">
-          <div id="Initial Prototype">
+          <div>
             <h2>Initial Prototype</h2>
             <p>
               Based on our final sketch, we developed the following visual
@@ -350,9 +443,9 @@ function App() {
         </div>
       </div>
       <hr className="lineBreakBetweenSections" />
-      <div className="sectionContainer">
+      <div className="sectionContainer" id="InitialFeedback">
         <div className="section">
-          <div id="Initial Feedback">
+          <div>
             <h2>Initial Feedback</h2>
             <p>
               During a critique session with our peers, we received the
@@ -417,12 +510,8 @@ function App() {
                 minor changes&quot; section above
               </li>
             </ul>
-          </div>
-        </div>
-        <hr className="lineBreakBetweenSections" />
-        <div className="section">
-          <div id="Prototype Comparison">
-            <h2>Prototype Comparison</h2>
+            <br />
+            <h3>Prototype Comparison</h3>
             <p>
               The diagrams below showcase the key changes that we made after
               receiving feedback, with the initial version of the prototype
@@ -443,9 +532,9 @@ function App() {
         </div>
       </div>
       <hr className="lineBreakBetweenSections" />
-      <div className="sectionContainer">
+      <div className="sectionContainer" id="FinalPrototype">
         <div className="section">
-          <div id="Final Prototype">
+          <div>
             <h2>Final Prototype</h2>
             <p>
               Based on the feedback we received on our initial prototype, we
@@ -469,10 +558,10 @@ function App() {
         </div>
       </div>
       <hr className="lineBreakBetweenSections" />
-      <div className="sectionContainer">
+      <div className="sectionContainer" id="UserTesting">
         <div className="section">
-          <div id="User Testing">
-            <h2>User Testing</h2>
+          <div>
+            <h2>Final Feedback</h2>
             <p>
               We conducted user testing on our final prototype with three users
               through the UserTesting platform. The sampled users were all women
