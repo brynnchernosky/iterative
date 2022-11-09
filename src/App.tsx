@@ -210,8 +210,17 @@ function App() {
             </Carousel>
             <br />
             <p>
-              Our third prototype was inspired by Khan Academy.
-              {/* TODO @Robert - add description and image carousel */}
+              Our third prototype was inspired by Khan Academy, one of the most
+              popular online platforms for learning a variety of different
+              subjects. The Home page features an informative header with
+              account information (which persists though all of the screens),
+              along with a scrollable display of cards with each card being a
+              lesson module on a given topic. Clicking on one of these module
+              cards opens the Module View, which gives more detail on current
+              progress on the different topics that are a part of the module.
+              Clicking on one of these topics opens the Topic View, where the
+              user can read the topic description and jump directly into the
+              lesson.
             </p>
             <br />
             <Carousel>
