@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import "./App.scss";
 import Carousel from "react-material-ui-carousel";
-import { Paper, Button } from "@mui/material";
+import {
+  Paper,
+  Button,
+  Card,
+  CardMedia,
+  CardContent,
+  Typography,
+  Grid,
+} from "@mui/material";
 
 function App() {
   const duolingoSketches = [
@@ -146,28 +154,27 @@ function App() {
           <div id="Overview">
             <h2>Overview</h2>
             <p>
-              For this assignment, students are tasked with iteratively
+              For this assignment, students were tasked with iteratively
               designing a mobile, website, or desktop application for a startup
               of their choice.
             </p>
             <br />
             <p>
-              Our startup of choice is Avocademy, a startup founded in 2020
-              dedicated to teaching people UI/UX design. They offer an
-              eight-week personalized UI/UX curriculum, mentoring services, and
+              Our team chose Avocademy, a startup founded in 2020 dedicated to
+              teaching people UI/UX design. They offer an eight-week
+              personalized UI/UX curriculum, mentoring services, and
               portfolio-building support. We chose this startup because we are
               all current students in a UI/UX course at Brown, which allows us
               to integrate our perspectives into the project.
             </p>
             <br />
             <p>
-              Our team decided to prototype what the Avocademy learning
-              experience could look like for users of a website. To do this, we
-              initially sketched out a variety of possible experiences before
-              honing in on a final design to produce an interactive Figma
-              prototype for. We received feedback during a critique session and
-              through user testing, which allowed us to further refine our
-              prototype and ultimately show it to the company.
+              We continually iterated on our design for the Avocademy user
+              experience, initially sketching out a variety of possible
+              experiences before honing in on a final design to produce an
+              interactive Figma prototype for. After we received feedback during
+              a critique session and through user testing, we further refined
+              our prototype to ultimately show to the company.
             </p>
           </div>
         </div>
@@ -176,7 +183,7 @@ function App() {
       <div className="sectionContainer">
         <div className="section">
           <div id="Initial Sketches">
-            {/* TODO @Nick - make images in carousel into a uniform size */}
+            {/* TODO @Nick - make images in carousel into a uniform size and smaller */}
             <h2>Initial Sketches</h2>
             <p>
               Our first prototype was inspired by language-learning site
@@ -194,7 +201,7 @@ function App() {
               ideas workflow.
             </p>
             <br />
-            <Carousel autoPlay={false}>
+            <Carousel autoPlay={false} navButtonsAlwaysVisible={true}>
               {duolingoSketches.map((item, i) => (
                 <Paper key={i}>
                   <img src={item.image} style={{ width: "100%" }} />
@@ -216,7 +223,7 @@ function App() {
               particular puzzle.
             </p>
             <br />
-            <Carousel autoPlay={false}>
+            <Carousel autoPlay={false} navButtonsAlwaysVisible={true}>
               {codinGameSketches.map((item, i) => (
                 <Paper key={i}>
                   <img src={item.image} style={{ width: "100%" }} />
@@ -236,12 +243,13 @@ function App() {
               these topics opens the Topic View, where the user can read the
               topic description and jump directly into the lesson.
             </p>
+            <br />
             <p>
               The below screens show a mockup of the homepage, module view, and
               topic view for an activity of a module.
             </p>
             <br />
-            <Carousel autoPlay={false}>
+            <Carousel autoPlay={false} navButtonsAlwaysVisible={true}>
               {khanSketches.map((item, i) => (
                 <Paper key={i}>
                   <img src={item.image} style={{ width: "100%" }} />
@@ -262,7 +270,7 @@ function App() {
               page, and editor page for an activity of a module.
             </p>
             <br />
-            <Carousel autoPlay={false}>
+            <Carousel autoPlay={false} navButtonsAlwaysVisible={true}>
               {codecademySketches.map((item, i) => (
                 <Paper key={i}>
                   <img src={item.image} style={{ width: "100%" }} />
@@ -291,7 +299,7 @@ function App() {
               selection page, an example task, the mentor meeting scheduling
               workflow, and the project ideas workflow.
             </p>
-            <Carousel autoPlay={false}>
+            <Carousel autoPlay={false} navButtonsAlwaysVisible={true}>
               {finalSketches.map((item, i) => (
                 <Paper key={i}>
                   <img src={item.image} style={{ width: "100%" }} />
@@ -306,20 +314,28 @@ function App() {
         <div className="section">
           <div id="Initial Prototype">
             <h2>Initial Prototype</h2>
-            Based on our low-fidelity prototype, we produced an initial high-fidelity prototype with example interactions in Figma, which is
+            Based on our final sketch, we developed the following visual design
+            guide for our website, shown below.
+            <img
+              src={"/DesignGuide.jpg"}
+              id="designGuide"
+              style={{ width: "30%" }}
+            />
+            After that, we combined our low-fidelity prototype with our design
+            guide to produce our initial high-fidelity prototype, which is
             embedded below and can also be accessed{" "}
             <a href="https://www.figma.com/proto/HXYixM5CfPGaaenXeHHSiD/Avocademy-Initial-Prototype?node-id=1%3A7&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A7">
               here
             </a>
             .
+            <br />
             <iframe
               style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
-              width="800"
-              height="450"
+              width="100%"
+              height="600"
               src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FHXYixM5CfPGaaenXeHHSiD%2FAvocademy-Initial-Prototype%3Fnode-id%3D1%253A7%26scaling%3Dscale-down%26page-id%3D0%253A1%26starting-point-node-id%3D1%253A7"
               allowFullScreen
             ></iframe>
-            {/* TODO */}
             <br />
             <p>
               During a critique session with our peers, we received the
@@ -373,9 +389,15 @@ function App() {
             </ul>
           </div>
         </div>
+        <hr className="lineBreakBetweenSections" />
         <div className="section">
           <div id="Prototype Comparison">
             <h2>Prototype Comparison</h2>
+            <p>
+              The diagrams below showcase the key changes that we made between
+              the initial and final version of the prototype after receiving
+              feedback.
+            </p>
             <Carousel autoPlay={false} sx={{ width: "80vw" }}>
               {comparisons.map((item, i) => (
                 <Paper key={i}>
@@ -391,12 +413,134 @@ function App() {
         <div className="section">
           <div id="Final Prototype">
             <h2>Final Prototype</h2>
-            <p>embed prototype</p>
-            {/* TODO */}
-            <p>discuss user testing results</p>
-            {/* TODO */}
-            <p>email startup</p>
-            {/* TODO */}
+            Based on the feedback we received on our initial prototype, we
+            implemented the changes from the "Prototype Comparison" section and
+            developed the final version of the high-fidelity prototype, which is
+            embedded below and can also be accessed{" "}
+            <a href="https://www.figma.com/proto/h9kL8DP45ex85JgEiNQ85H/Avocademy-Final-Prototype?page-id=0%3A1&node-id=1%3A7&viewport=24%2C212%2C0.14&scaling=scale-down&starting-point-node-id=1%3A7">
+              here
+            </a>
+            .
+            <br />
+            <iframe
+              style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
+              width="100%"
+              height="600"
+              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fh9kL8DP45ex85JgEiNQ85H%2FAvocademy-Final-Prototype%3Fpage-id%3D0%253A1%26node-id%3D1%253A7%26viewport%3D24%252C212%252C0.14%26scaling%3Dscale-down%26starting-point-node-id%3D1%253A7"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <hr className="lineBreakBetweenSections" />
+      <div className="sectionContainer">
+        <div className="section">
+          <div id="User Testing">
+            <h2>User Testing</h2>
+            <p>
+              We conducted user testing on our final prototype with 3 users. The
+              users were given a prompt that provided context for the prototype
+              and asked them to complete a set of tasks.
+            </p>
+            <br />
+            <p>The scenario provided to the users was as follows:</p>
+            <p>
+              <ul>
+                <li>
+                  You've signed up for an 8 week bootcamp learning about user
+                  interfaces and user experiences, with the hopes of getting a
+                  job in UI/UX afterwards. You're currently on Week 2 of the
+                  course, and you have been working on the Intro to Bootstrap
+                  module. Please note that the "webpage" you'll interact with
+                  for these tasks is not an actual webpage but instead an
+                  interactive mockup made on prototyping software.
+                </li>
+              </ul>
+            </p>
+            <br />
+            <p>The tasks given to the users were as follows:</p>
+            <p>
+              <ul>
+                <li>
+                  Sign up for an account and complete the first lesson of the
+                  course
+                </li>
+                <li>
+                  Schedule a mentor meeting and complete the project ideas
+                  workflow
+                </li>
+              </ul>
+            </p>
+            <br />
+            <Grid container spacing={2}>
+              <Grid item xs={12} md={4}>
+                <Card sx={{ maxWidth: 345 }}>
+                  <CardMedia
+                    component="iframe"
+                    height="200"
+                    src="https://www.youtube.com/embed/dClXKhpQKp4"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      User 1
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      <ul>
+                        <li>...</li>
+                      </ul>
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Card sx={{ maxWidth: 345 }}>
+                  <CardMedia
+                    component="iframe"
+                    height="200"
+                    src="https://www.youtube.com/embed/CKoLWWJvup4"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      User 2
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      <ul>
+                        <li>...</li>
+                      </ul>
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Card sx={{ maxWidth: 345 }}>
+                  <CardMedia
+                    component="iframe"
+                    height="200"
+                    src="https://www.youtube.com/embed/Q6TDsTGgdew"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      User 3
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      <ul>
+                        <li>...</li>
+                      </ul>
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            </Grid>
+            <br />
+            <p>
+              TODO: In your write-up, explain what the UserTesting results mean
+              by directly addressing the task you gave, and discuss if they were
+              in line with your expectations. Include a short summary of the
+              subtasks, what types of errors users made, and generally how they
+              did on the tasks. Finally, comment about the potential interface
+              changes you would make based on your UserTesting results and
+              feedback.
+            </p>
           </div>
         </div>
       </div>
