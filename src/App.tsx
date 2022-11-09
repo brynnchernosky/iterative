@@ -629,7 +629,13 @@ function App() {
             </p>
             <br />
             <Grid container spacing={2}>
-              <Grid item xs={12} md={4}>
+              {/* align items stretch for each card */}
+              <Grid
+                item
+                xs={12}
+                md={4}
+                style={{ display: "flex", alignItems: "stretch" }}
+              >
                 <Card sx={{ maxWidth: 345 }}>
                   <CardMedia
                     component="iframe"
@@ -665,7 +671,12 @@ function App() {
                   </CardContent>
                 </Card>
               </Grid>
-              <Grid item xs={12} md={4}>
+              <Grid
+                item
+                xs={12}
+                md={4}
+                style={{ display: "flex", alignItems: "stretch" }}
+              >
                 <Card sx={{ maxWidth: 345 }}>
                   <CardMedia
                     component="iframe"
@@ -701,7 +712,12 @@ function App() {
                   </CardContent>
                 </Card>
               </Grid>
-              <Grid item xs={12} md={4}>
+              <Grid
+                item
+                xs={12}
+                md={4}
+                style={{ display: "flex", alignItems: "stretch" }}
+              >
                 <Card sx={{ maxWidth: 345 }}>
                   <CardMedia
                     component="iframe"
