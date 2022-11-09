@@ -590,7 +590,6 @@ function App() {
             <p>The following tasks were given to the users:</p>
             <ol>
               <li>
-                {" "}
                 Submit your work on the Intro to Bootstrap Basic Tools task you
                 were working on earlier.
               </li>
@@ -610,9 +609,25 @@ function App() {
               or colleague.
             </p>
             <br />
+            <p>The following post-test questions were asked to the users:</p>
+            <p>
+              <ul>
+                <li>What frustrated you most about this site?</li>
+                <li>
+                  If you had a magic wand, how would you improve this site?
+                </li>
+                <li>What did you like about the site?</li>
+                <li>
+                  How likely are you to recommend this site to a friend or
+                  colleague (0=Not at all likely, and 10=Very likely)?
+                </li>
+              </ul>
+            </p>
+            <br />
             <p>
               Videos of each user's performance on the tasks are shown below:
             </p>
+            <br />
             <Grid container spacing={2}>
               <Grid item xs={12} md={4}>
                 <Card sx={{ maxWidth: 345 }}>
@@ -627,7 +642,24 @@ function App() {
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
                       <ul>
-                        <li>...</li>
+                        <li>
+                          User was easily able to navigate to lesson page and
+                          submit work
+                        </li>
+                        <li>
+                          User was able to easily navigate to the scheduling
+                          page and set up a meeting
+                        </li>
+                        <li>
+                          User was able to easily navigate to the project ideas
+                          page and look at project ideas
+                        </li>
+                        <li>
+                          Navigation could be made more intuitive by clearly
+                          indicating which page the user would be navigating to
+                          when clicking on a link
+                        </li>
+                        <li>Was in line with expectations!</li>
                       </ul>
                     </Typography>
                   </CardContent>
@@ -646,7 +678,24 @@ function App() {
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
                       <ul>
-                        <li>...</li>
+                        <li>
+                          User was able to navigate to lesson page and submit
+                          work, though was not confident that the submission was
+                          successful
+                        </li>
+                        <li>
+                          User was able to easily navigate to the scheduling
+                          page and set up a meeting
+                        </li>
+                        <li>
+                          User was able to easily navigate to the project ideas
+                          page and look at project ideas
+                        </li>
+                        <li>
+                          Further indication of the success of the submission
+                          would be helpful
+                        </li>
+                        <li>Was in line with expectations!</li>
                       </ul>
                     </Typography>
                   </CardContent>
@@ -665,7 +714,25 @@ function App() {
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
                       <ul>
-                        <li>...</li>
+                        <li>
+                          User initially attempted to navigate to the course
+                          through the goals section, which was not interactable.
+                          They were eventually able to navigate to lesson page
+                          and submit work
+                        </li>
+                        <li>
+                          User was able to easily navigate to the scheduling
+                          page and set up a meeting
+                        </li>
+                        <li>
+                          User was able to easily navigate to the project ideas
+                          page and look at project ideas
+                        </li>
+                        <li>
+                          Improved highlighting and emphasis of in-progress
+                          courses could help users quickly resume their work
+                        </li>
+                        <li>Was in line with expectations!</li>
                       </ul>
                     </Typography>
                   </CardContent>
@@ -674,13 +741,39 @@ function App() {
             </Grid>
             <br />
             <p>
-              TODO: In your write-up, explain what the UserTesting results mean
-              by directly addressing the task you gave, and discuss if they were
-              in line with your expectations. Include a short summary of the
-              subtasks, what types of errors users made, and generally how they
-              did on the tasks. Finally, comment about the potential interface
-              changes you would make based on your UserTesting results and
-              feedback.
+              Users explicitly complimented the layout of the editor page and
+              the goals sections. None of the users got stuck for any
+              significant amount of time, and all of them were able to complete
+              the tasks successfully.
+            </p>
+            <br />
+            <p>
+              There were occasional moments of hesitation while users were
+              determining which button was necessary to use for navigation. This
+              could be addressed by making the navigation buttons prominently
+              show which page they would be navigating to, and by making the
+              buttons use more visually distinct icons. The user dashboard page
+              could be improved by making the in-progress courses more visually
+              distinct to make it easier for users to quickly resume.
+            </p>
+            <br />
+            <p>
+              Users explicitly appreciated the breakdowns of content in modules,
+              which made the content more approachable and inviting. This
+              strength could be further embraced by emphasizing the same module
+              structure on every page, and by bringing the module layout to the
+              syllabus button on the lesson editor page. The lesson editor page
+              could have also benefited from a clearer indication of the success
+              of the submission, as users were unsure of the status of their
+              work.
+            </p>
+            <br />
+            <p>
+              Overall, all the users were able to complete the tasks
+              successfully, and the feedback was generally positive. In their
+              post-test questionnaire, all the users rated the site as very
+              likely to recommend to a friend or colleague (10, 9, and 7 out of
+              10 respectively).
             </p>
           </div>
         </div>
