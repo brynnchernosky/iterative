@@ -212,15 +212,18 @@ function App() {
             <p>
               Our third prototype was inspired by Khan Academy, one of the most
               popular online platforms for learning a variety of different
-              subjects. The Home page features an informative header with
-              account information (which persists though all of the screens),
-              along with a scrollable display of cards with each card being a
-              lesson module on a given topic. Clicking on one of these module
-              cards opens the Module View, which gives more detail on current
-              progress on the different topics that are a part of the module.
-              Clicking on one of these topics opens the Topic View, where the
-              user can read the topic description and jump directly into the
-              lesson.
+              subjects. The homepage features an informative header with account
+              information (which persists though all of the screens), along with
+              a scrollable display of cards with each card being a lesson module
+              on a given topic. Clicking on one of these module cards opens the
+              Module View, which gives more detail on current progress on the
+              different topics that are a part of the module. Clicking on one of
+              these topics opens the Topic View, where the user can read the
+              topic description and jump directly into the lesson.
+            </p>
+            <p>
+              The below screens show a mockup of the homepage, module view, and
+              topic view for an activity of a module.
             </p>
             <br />
             <Carousel>
@@ -232,15 +235,15 @@ function App() {
             </Carousel>
             <br />
             <p>
-              Our fourth prototype was inspired by Codecademy, and online
-              platform that offers coding classes to many different languages.
-              It features a detailed page for one to keep track of the topics
-              they are interested in or working on and a code editor for doing
+              Our fourth prototype was inspired by Codecademy, an online
+              platform that offers coding classes for many different languages.
+              It features a detailed page for users to keep track of the topics
+              they are interested in or working on, and a code editor for doing
               activities.
             </p>
             <br />
             <p>
-              The below screens show a mockup of the home page, course selection
+              The below screens show a mockup of the homepage, course selection
               page, and editor page for an activity of a module.
             </p>
             <br />
