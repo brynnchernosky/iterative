@@ -119,6 +119,21 @@ function App() {
     },
   ];
 
+  const comparisons = [
+    {
+      name: "First",
+      image: "comparison1.jpg",
+    },
+    {
+      name: "Second",
+      image: "comparison2.jpg",
+    },
+    {
+      name: "Third",
+      image: "comparison3.jpg",
+    },
+  ];
+
   return (
     <div id="App">
       <div id="appHeaderContainer">
@@ -345,7 +360,18 @@ function App() {
               </li>
             </ul>
           </div>
-          {/* TODO */}
+        </div>
+        <div className="section">
+          <div id="Prototype Comparison">
+            <h2>Prototype Comparison</h2>
+            <Carousel>
+              {comparisons.map((item, i) => (
+                <Paper key={i}>
+                  <img src={item.image} />
+                </Paper>
+              ))}
+            </Carousel>
+          </div>
         </div>
       </div>
       <hr className="lineBreakBetweenSections" />
