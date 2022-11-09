@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import "./App.scss";
 import Carousel from "react-material-ui-carousel";
-import { Paper, Button } from "@mui/material";
+import {
+  Paper,
+  Button,
+  Card,
+  CardMedia,
+  CardContent,
+  Typography,
+  Grid,
+} from "@mui/material";
 
 function App() {
   const duolingoSketches = [
@@ -395,10 +403,118 @@ function App() {
             <h2>Final Prototype</h2>
             <p>embed prototype</p>
             {/* TODO */}
-            <p>discuss user testing results</p>
-            {/* TODO */}
-            <p>email startup</p>
-            {/* TODO */}
+          </div>
+        </div>
+      </div>
+      <hr className="lineBreakBetweenSections" />
+      <div className="sectionContainer">
+        <div className="section">
+          <div id="User Testing">
+            <h2>User Testing</h2>
+            <p>
+              We conducted user testing on our final prototype with 3 users. The
+              users were given a prompt that provided context for the prototype
+              and asked them to complete a set of tasks.
+            </p>
+            <br />
+            <p>The scenario provided to the users was as follows:</p>
+            <p>
+              <ul>
+                <li>
+                  You've signed up for an 8 week bootcamp learning about user
+                  interfaces and user experiences, with the hopes of getting a
+                  job in UI/UX afterwards. You're currently on Week 2 of the
+                  course, and you have been working on the Intro to Bootstrap
+                  module. Please note that the "webpage" you'll interact with
+                  for these tasks is not an actual webpage but instead an
+                  interactive mockup made on prototyping software.
+                </li>
+              </ul>
+            </p>
+            <br />
+            <p>The tasks given to the users were as follows:</p>
+            <p>
+              <ul>
+                <li>
+                  Sign up for an account and complete the first lesson of the
+                  course
+                </li>
+                <li>
+                  Schedule a mentor meeting and complete the project ideas
+                  workflow
+                </li>
+              </ul>
+            </p>
+            <br />
+            <Grid container spacing={2}>
+              <Grid item xs={12} md={4}>
+                <Card sx={{ maxWidth: 345 }}>
+                  <CardMedia
+                    component="iframe"
+                    height="200"
+                    src="https://www.youtube.com/embed/dClXKhpQKp4"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      User 1
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      <ul>
+                        <li>...</li>
+                      </ul>
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Card sx={{ maxWidth: 345 }}>
+                  <CardMedia
+                    component="iframe"
+                    height="200"
+                    src="https://www.youtube.com/embed/CKoLWWJvup4"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      User 2
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      <ul>
+                        <li>...</li>
+                      </ul>
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Card sx={{ maxWidth: 345 }}>
+                  <CardMedia
+                    component="iframe"
+                    height="200"
+                    src="https://www.youtube.com/embed/Q6TDsTGgdew"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      User 3
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      <ul>
+                        <li>...</li>
+                      </ul>
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            </Grid>
+            <br />
+            <p>
+              TODO: In your write-up, explain what the UserTesting results mean
+              by directly addressing the task you gave, and discuss if they were
+              in line with your expectations. Include a short summary of the
+              subtasks, what types of errors users made, and generally how they
+              did on the tasks. Finally, comment about the potential interface
+              changes you would make based on your UserTesting results and
+              feedback.
+            </p>
           </div>
         </div>
       </div>
