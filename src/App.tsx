@@ -279,10 +279,7 @@ function App() {
         <div className="section">
           <div id="Initial Prototype">
             <h2>Initial Prototype</h2>
-            <p>
-              embed prototype -- revert to file as it was on the day we did
-              critique
-            </p>
+            <p>embed prototype</p>
             {/* TODO */}
             <br />
             <p>
@@ -318,12 +315,23 @@ function App() {
               </ul>
             </ul>
             <br />
-            In response to this feedback, we redesigned the homepage to be more
-            visual; added a section of the homepage explaining the user&apos;s
-            current place in the course with a button that in practice would
-            lead to a description of the entire curriculum; changed the
-            interaction behavior in the prototype to reduce confusion; and made
-            all of the minor changes.
+            <p>In response to this feedback, we implemented these changes:</p>
+            <ul>
+              <li>Redesigned the homepage to be more visual</li>
+              <li>
+                Added a section of the homepage showing the user&apos;s current
+                place in the course. This includes a button that in practice
+                would lead to a description of the entire curriculum
+              </li>
+              <li>
+                Changed the interaction behavior in the prototype to reduce
+                confusion
+              </li>
+              <li>
+                Implemented all of the suggested changes in the &quot;suggested
+                minor changes&quot; section above
+              </li>
+            </ul>
           </div>
           {/* TODO */}
         </div>
