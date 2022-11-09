@@ -194,7 +194,7 @@ function App() {
               ideas workflow.
             </p>
             <br />
-            <Carousel>
+            <Carousel autoPlay={false}>
               {duolingoSketches.map((item, i) => (
                 <Paper key={i}>
                   <img src={item.image} style={{ width: "100%" }} />
@@ -216,7 +216,7 @@ function App() {
               particular puzzle.
             </p>
             <br />
-            <Carousel>
+            <Carousel autoPlay={false}>
               {codinGameSketches.map((item, i) => (
                 <Paper key={i}>
                   <img src={item.image} style={{ width: "100%" }} />
@@ -241,7 +241,7 @@ function App() {
               topic view for an activity of a module.
             </p>
             <br />
-            <Carousel>
+            <Carousel autoPlay={false}>
               {khanSketches.map((item, i) => (
                 <Paper key={i}>
                   <img src={item.image} style={{ width: "100%" }} />
@@ -262,7 +262,7 @@ function App() {
               page, and editor page for an activity of a module.
             </p>
             <br />
-            <Carousel>
+            <Carousel autoPlay={false}>
               {codecademySketches.map((item, i) => (
                 <Paper key={i}>
                   <img src={item.image} style={{ width: "100%" }} />
@@ -291,7 +291,7 @@ function App() {
               selection page, an example task, the mentor meeting scheduling
               workflow, and the project ideas workflow.
             </p>
-            <Carousel>
+            <Carousel autoPlay={false}>
               {finalSketches.map((item, i) => (
                 <Paper key={i}>
                   <img src={item.image} style={{ width: "100%" }} />
@@ -364,7 +364,7 @@ function App() {
         <div className="section">
           <div id="Prototype Comparison">
             <h2>Prototype Comparison</h2>
-            <Carousel>
+            <Carousel autoPlay={false} sx={{ width: "80vw" }}>
               {comparisons.map((item, i) => (
                 <Paper key={i}>
                   <img src={item.image} />
